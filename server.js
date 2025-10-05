@@ -1,8 +1,10 @@
 const express = require('express');
 const db=require('./database.js');
 const app=express();
+const cors = require('cors');
 const bcrypt=require('bcrypt');
 const jwt=require('jsonwebtoken');
+app.use(cors())
 app.use(express.json());
 
 const SECRET_KEY="your_secret_key";
